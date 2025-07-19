@@ -1,5 +1,7 @@
 package model;
 
+import validacao.ValidarTransacao;
+
 public class Conta {
 
     private int numero;
@@ -28,11 +30,20 @@ public class Conta {
     }
 
     public void depositarSaldo(double valor) {
+        ValidarTransacao.validarDeposito(valor);
+
         this.saldo += valor;
     }
 
     public void sacarSaldo(double valor) {
+        ValidarTransacao.validarSaque(valor, this.saldo);
         this.saldo -= valor;
+    }
+
+    public void transferirValor(Conta destino, double valor) {
+        ValidarTransacao.validarTransferencia(valor, this.saldo);
+        this.saldo -= valor;
+        destino.saldo += valor;
     }
 
 }
