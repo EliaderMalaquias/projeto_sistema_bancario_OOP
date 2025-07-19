@@ -1,6 +1,6 @@
 package validacao;
 
-public class validarTransacao {
+public class ValidarTransacao {
 
     public static void validarDeposito(double valor) {
         if(valor <= 0) {
