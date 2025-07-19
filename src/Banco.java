@@ -27,6 +27,6 @@ public class Banco {
     public void exibirSaldo(String cpf) {
         Cliente cliente = getClientePorCPF(cpf);
 
-        System.out.println("Saldo da Conta: R$");
+        System.out.println("Saldo da Conta: R$" + cliente.getConta().getSaldo());
     }
 }

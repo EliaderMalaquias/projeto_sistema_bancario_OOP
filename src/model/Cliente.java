@@ -28,5 +28,7 @@ public class Cliente {
         return nome;
     }
 
-
+    public Conta getConta() {
+        return conta;
+    }
 }
