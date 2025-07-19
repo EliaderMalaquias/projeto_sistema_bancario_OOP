@@ -27,4 +27,12 @@ public class Conta {
         return titular;
     }
 
+    public void depositarSaldo(double valor) {
+        this.saldo += valor;
+    }
+
+    public void sacarSaldo(double valor) {
+        this.saldo -= valor;
+    }
+
 }
